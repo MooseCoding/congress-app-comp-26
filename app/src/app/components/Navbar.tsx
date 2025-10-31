@@ -8,7 +8,7 @@ export default function Navbar() {
       {/* Logo */}
       <Link
         href="/"
-        className="text-4xl sm:text-5xl font-extrabold text-pink-300 drop-shadow-[0_2px_8px_rgba(236,72,153,0.3)] hover:text-teal-300 transition-all duration-300"
+        className="text-4xl sm:text-5xl font-extrabold text-pink-300 text-shadow-purple-500 text-shadow-lg/10 drop-shadow-[0_2px_8px_rgba(236,72,153,0.3)] hover:text-teal-300 transition-all duration-300"
       >
         APex
       </Link>
@@ -16,31 +16,18 @@ export default function Navbar() {
       {/* Desktop menu */}
       <div className="hidden md:flex gap-8 text-gray-300 text-lg font-medium">
         <a
-          href="#"
+          href="/classes"
           className="relative group transition-all duration-300 hover:text-pink-300"
         >
-          Features
+          Classes
           <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-gradient-to-r from-pink-400 to-teal-400 group-hover:w-full transition-all duration-300"></span>
         </a>
         <a
-          href="#"
-          className="relative group transition-all duration-300 hover:text-pink-300"
-        >
-          Pricing
-          <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-gradient-to-r from-pink-400 to-teal-400 group-hover:w-full transition-all duration-300"></span>
-        </a>
-        <a
-          href="#about"
+          href="/about"
           className="relative group transition-all duration-300 hover:text-pink-300"
         >
           About
           <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-gradient-to-r from-pink-400 to-teal-400 group-hover:w-full transition-all duration-300"></span>
-        </a>
-        <a
-          href="#"
-          className="relative font-semibold text-white hover:text-teal-300 transition-all duration-300"
-        >
-          Login
         </a>
       </div>
 

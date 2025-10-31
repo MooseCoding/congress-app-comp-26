@@ -10,12 +10,14 @@ export default function ClassMenu({ classSlug, lessons = [], activeLesson }: Cla
   return (
     <aside className="w-64 bg-gray-900/40 p-4 rounded-xl shadow-lg flex-shrink-0 space-y-2">
       {/* Back to class button */}
-      <Link
-        href={`/classes/${classSlug}`}
-        className="block px-3 py-2 rounded bg-gray-800/70 hover:bg-gray-800 text-gray-100 font-semibold transition"
-      >
-        ← Back to Class
-      </Link>
+      {(activeLesson!=="none") &&
+        <Link
+          href={`/classes/${classSlug}`}
+          className="block px-3 py-2 rounded bg-gray-800/70 hover:bg-gray-800 text-gray-100 font-semibold transition"
+        >
+          ← Back to Class
+        </Link>
+      }
 
       {/* Lesson links */}
       {lessons.length > 0 ? (

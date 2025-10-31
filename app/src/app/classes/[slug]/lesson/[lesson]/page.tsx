@@ -10,7 +10,7 @@ interface LessonPageProps {
 }
 
 export default async function LessonPage({ params }: LessonPageProps) {
-  const { slug, lesson } = params;
+  const { slug, lesson } = await params;
 
   const filePath = path.join(process.cwd(), 'content', slug, lesson + '.md');
   if (!fs.existsSync(filePath)) return <p className="text-red-400">Lesson not found</p>;
@@ -28,8 +28,10 @@ export default async function LessonPage({ params }: LessonPageProps) {
   return (
     <main className="min-h-screen bg-gray-950 text-gray-100 flex flex-col">
       <Navbar />
-      <div className="flex flex-1 max-w-7xl mx-auto px-6 py-12 gap-8">
-        <ClassMenu classSlug={slug} lessons={lessons} activeLesson={lesson} />
+      <div className="flex flex-1 min-w-screen mx-auto px-6 py-12 gap-8">
+        <div className="justify-start">
+          <ClassMenu classSlug={slug} lessons={lessons} activeLesson={lesson} />
+        </div>
         <div className="flex-1 bg-gray-900/40 p-6 rounded-xl shadow-lg prose max-w-full text-gray-100">
           <h1 className="text-3xl font-bold text-pink-300 mb-4">{lesson.replace(/-/g, ' ')}</h1>
           <div dangerouslySetInnerHTML={{ __html: contentHtml }} />

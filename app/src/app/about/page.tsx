@@ -90,10 +90,10 @@ export default function AboutPage() {
         <h2 className="text-4xl font-bold text-pink-300 text-center mb-16">
           Meet the Team
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 grid-center">
           {[
             { name: 'Topher Fontana', role: 'Programming Lead', color: 'bg-teal-300' },
-            { name: 'Katie Saadeh', role: 'Team Lead', color: 'bg-pink-300' },
+            { name: 'Katie Saadeh', role: 'Team Lead', color: 'bg-pink-300 ' },
           ].map((member, idx) => (
             <div
               key={idx}

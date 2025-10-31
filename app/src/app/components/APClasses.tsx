@@ -34,7 +34,7 @@ export default function APClasses() {
   const classes = [
     { name: 'AP Lang', color: 'text-pink-300', link: "/classes/ap-lang" },
     { name: 'AP Calc BC', color: 'text-teal-300', link: "/classes/ap-calc" },
-    { name: 'AP Physics 1 & C Mechanics', color: 'text-yellow-300', link: "/classes/ap-physics" },
+    { name: 'AP Physics 1, 2, Mechanics and E & M', color: 'text-yellow-300', link: "/classes/ap-physics" },
     { name: 'AP US History', color: 'text-blue-300', link: "/classes/ap-ush" },
     { name: 'AP Environmental Science', color: 'text-green-300', link: "/classes/ap-es" },
   ];
